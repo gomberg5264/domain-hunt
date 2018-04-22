@@ -1,4 +1,4 @@
-# [![Domain Hunt](media/logo-t.png)](https://github.com/Shriram-Balaji/domain-hunt)
+# [![Domain Hunt](media/logo.svg)](https://github.com/Shriram-Balaji/domain-hunt)
 
 > Domain search and Comparison, simplified.
 

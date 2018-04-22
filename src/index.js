@@ -11,9 +11,7 @@ const app = express();
 
 app.set("port", port);
 app.use(logger("combined"));
-app.use("/", (req, res) => {
-	res.send("Hey! There's nothing to see here. Ciao 👋");
-});
+
 app.use("/domain-hunt", routes());
 
 // server configuration

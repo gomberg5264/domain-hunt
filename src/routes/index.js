@@ -12,13 +12,15 @@ module.exports = () => {
 	router.use(auth());
 
 	router.get("/", (req, res, next) => {
-		res.send("Welcome to Domain Hunt! 🌎");
+		res.status(200).json({
+			message: "Welcome to Domain Hunt! 🌎"
+		});
 	});
 
 	// checks for domain availability
 	router.get("/available", (req, res, next) => {
-		if (req._key_ && req._secret_) {
-			let reqPath = config.api.goDaddy.path;
+		if (req._key_ && req._secret_ && req._api_path_) {
+			let reqPath = req._api_path_;
 			let reqParams = {
 				domain: req.query.domain,
 				checkType: req.query.checkType,
@@ -55,8 +57,8 @@ module.exports = () => {
 
 	// provides domain-name suggestions based on input query
 	router.get("/suggestions", (req, res, next) => {
-		if (req._key_ && req._secret_) {
-			let reqPath = config.api.goDaddy.path;
+		if (req._key_ && req._secret_ && req._api_path_) {
+			let reqPath = req._api_path_;
 			/**
 			 *  query - domain to search for suggestion
 			 *  country - Two letter ISO country code

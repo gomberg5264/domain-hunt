@@ -4,6 +4,7 @@ output.error = (...value) => {
 	console.error(red(...value));
 };
 
+// runs only when the DEBUG env variable is set to true
 output.debug = (...value) => {
 	if (process.env.DEBUG) console.debug(gray(...value));
 };

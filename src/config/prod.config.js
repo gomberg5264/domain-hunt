@@ -1,10 +1,6 @@
 "use strict";
 const config = {};
 
-// proxy configuration
-config.proxy = {};
-config.proxy.options = {};
-
 // External Api configuration
 config.api = {};
 config.api.goDaddy = {

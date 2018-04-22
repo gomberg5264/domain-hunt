@@ -1,26 +1,19 @@
-'use strict';
-const express = require('express');
-const http = require('http');
-const chalk = require('chalk');
-const logger = require('morgan')
-const routes = require('./routes')
-const port = process.env.PORT || 5000
+("use strict");
+const path = require("path");
+const express = require("express");
+const logger = require("morgan");
+const port = process.env.PORT || 5000;
+const HOMEDIR = path.join(__dirname, ".");
+const routes = require(path.join(HOMEDIR, "routes", "main.routes"));
+const { error, debug, success } = require(path.join(HOMEDIR, "util", "output.util"));
 const app = express();
+const Server = require("./server");
 
-app.set('port', port)
-app.use(logger('combined'))
-app.use('/domain-hunt', routes())
+app.set("port", port);
+app.use(logger("combined"));
+app.use("/domain-hunt", routes());
 
-// server configuration
-const onListening = () => {
-  console.log(chalk.blue('Listening on port', port));
-};
+// start Server
+Server.initialize(app);
 
-const onError = (err) => {
-  console.log(chalk.red(err));
-};
-
-const server = http.createServer(app)
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+module.exports = app;

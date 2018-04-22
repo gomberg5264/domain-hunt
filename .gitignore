@@ -57,5 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
-# local configuration file
+# configuration file
 local.config.js
+
+# vscode configuration
+.vscode/

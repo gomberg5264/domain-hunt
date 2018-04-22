@@ -5,7 +5,13 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "npm run test"
+    "test": "ava"
+  },
+  "ava": {
+    "files": [
+      "test/unit/**/*.js",
+      "test/integration/**/*.js"
+    ]
   },
   "repository": {
     "type": "git",
@@ -24,12 +30,16 @@
   },
   "homepage": "https://github.com/Shriram-Balaji/domain-hunt#readme",
   "dependencies": {
-    "chalk": "^2.3.2",
     "express": "^4.16.3",
     "http-proxy": "^1.16.2",
     "morgan": "^1.9.0",
     "node-fetch": "^2.1.2",
-    "psl": "^1.1.25",
-    "request": "^2.85.0"
+    "psl": "^1.1.25"
+  },
+  "devDependencies": {
+    "ava": "1.0.0-beta.4",
+    "chalk": "^2.3.2",
+    "prettier": "^1.12.0",
+    "supertest": "^3.0.0"
   }
 }

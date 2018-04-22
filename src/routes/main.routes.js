@@ -1,4 +1,4 @@
-"use strict";
+("use strict");
 const path = require("path");
 const router = require("express").Router();
 const fetch = require("node-fetch");
@@ -9,6 +9,7 @@ const { error, debug, success } = require(path.join(HOMEDIR, "util", "output.uti
 const httpUtil = require(path.join(HOMEDIR, "util", "http.util"));
 
 module.exports = () => {
+	// use auth middleware
 	router.use(auth());
 
 	router.get("/", (req, res, next) => {

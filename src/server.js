@@ -2,7 +2,7 @@
 const path = require("path");
 const http = require("http");
 const HOMEDIR = path.join(__dirname, ".");
-const { error, debug, success } = require(path.join(HOMEDIR, "util", "output.util"));
+const { error, debug, success } = require("util-box");
 const Server = () => {};
 /**
  *

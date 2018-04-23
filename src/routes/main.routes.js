@@ -5,8 +5,7 @@ const fetch = require("node-fetch");
 const HOMEDIR = path.join(__dirname, "..");
 const config = require(path.join(HOMEDIR, "config", "prod.config"));
 const auth = require(path.join(HOMEDIR, "middleware", "auth.middleware"));
-const { error, debug, success } = require(path.join(HOMEDIR, "util", "output.util"));
-const httpUtil = require(path.join(HOMEDIR, "util", "http.util"));
+const { httpUtil, error, debug, success } = require("util-box");
 
 module.exports = () => {
 	// use auth middleware

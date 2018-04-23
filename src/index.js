@@ -5,7 +5,7 @@ const logger = require("morgan");
 const port = process.env.PORT || 5000;
 const HOMEDIR = path.join(__dirname, ".");
 const routes = require(path.join(HOMEDIR, "routes", "main.routes"));
-const { error, debug, success } = require(path.join(HOMEDIR, "util", "output.util"));
+const { error, debug, success } = require("util-box");
 const app = express();
 const Server = require("./server");
 

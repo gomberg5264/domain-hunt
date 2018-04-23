@@ -1,6 +1,6 @@
 {
   "name": "domain-hunt",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "searches for a domain name, and provides links with pricing if available.",
   "main": "src/index.js",
   "scripts": {
@@ -34,7 +34,8 @@
     "http-proxy": "^1.16.2",
     "morgan": "^1.9.0",
     "node-fetch": "^2.1.2",
-    "psl": "^1.1.25"
+    "psl": "^1.1.25",
+    "util-box": "^1.0.2"
   },
   "devDependencies": {
     "ava": "1.0.0-beta.4",

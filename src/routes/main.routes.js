@@ -3,7 +3,6 @@ const path = require("path");
 const router = require("express").Router();
 const fetch = require("node-fetch");
 const HOMEDIR = path.join(__dirname, "..");
-const config = require(path.join(HOMEDIR, "config", "prod.config"));
 const auth = require(path.join(HOMEDIR, "middleware", "auth.middleware"));
 const { httpUtil, error, debug, success } = require("util-box");
 

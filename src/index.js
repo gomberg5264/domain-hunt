@@ -11,7 +11,7 @@ const Server = require("./server");
 
 app.set("port", port);
 app.use(logger("combined"));
-app.use("/domain-hunt", routes());
+app.use("/api", routes());
 
 // start Server
 Server.initialize(app);

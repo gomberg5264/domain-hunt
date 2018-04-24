@@ -12,8 +12,8 @@ const auth = () => {
 			api.secret = config.api.goDaddy.secret;
 			api.path = config.api.goDaddy.path;
 			cb(api);
-		} catch (error) {
-			error("Unable to read configuration due to  ", error.message);
+		} catch (err) {
+			error("Unable to read configuration due to", err);
 			debug("Falling Back to ENV variables");
 			api.accessKey = process.env.ACCESS_KEY;
 			api.secret = process.env.SECRET;

@@ -25,6 +25,7 @@ const auth = () => {
 	return function(req, res, next) {
 		getApiConfiguration(function(api) {
 			if (api.accessKey && api.secret && api.path) {
+				success(JSON.stringify(api));
 				req._key_ = api.accessKey;
 				req._secret_ = api.secret;
 				req._api_path_ = api.path;

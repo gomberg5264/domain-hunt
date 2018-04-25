@@ -17,7 +17,7 @@ test("GET /api", async t => {
 	t.plan(2);
 	const response = await request(baseSettings.BASE_URL).get("/api");
 	t.is(response.status, 200);
-	t.is(response.body.message, "Welcome to Domain Hunt's RESTful API 🌎");
+	t.is(response.body.message, "Welcome to Domain Hunt's RESTful API Interface! 🌎");
 });
 
 test("GET /api/available", async t => {

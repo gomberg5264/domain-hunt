@@ -11,6 +11,9 @@ const Server = require("./server");
 
 app.set("port", port);
 app.use(logger("combined"));
+app.use("/ping", (req, res, next) => {
+	res.status(200).json({ message: "pong" });
+});
 app.use("/api", routes());
 
 // start Server

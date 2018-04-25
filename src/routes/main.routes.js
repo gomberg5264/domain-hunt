@@ -12,7 +12,7 @@ module.exports = () => {
 
 	router.get("/", (req, res, next) => {
 		res.status(200).json({
-			message: "Welcome to Domain Hunt! 🌎"
+			message: "Welcome to Domain Hunt's RESTful API 🌎"
 		});
 	});
 

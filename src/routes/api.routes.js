@@ -72,6 +72,8 @@ module.exports = () => {
 				waitMs: req.query.waitMs,
 				limit: req.query.limit
 			};
+			// set default limit to 10
+			if (!reqParams.limit) reqParams.limit = 10;
 			// check if query for suggesting is present
 			if (!reqParams.query) {
 				error("Missing or invalid parameters: query");

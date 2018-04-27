@@ -1,6 +1,6 @@
 {
   "name": "domain-hunt",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "searches for a domain name, and provides links with pricing if available.",
   "main": "src/index.js",
   "scripts": {

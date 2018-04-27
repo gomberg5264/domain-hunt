@@ -62,13 +62,15 @@ module.exports = () => {
 			 *  query - domain to search for suggestion
 			 *  country - Two letter ISO country code
 			 *  city - Name of city as hint
+			 *  limit - Maximum number of suggestions to return
 			 *  waitMs - Max time in ms to wait for res
 			 **/
 			let reqParams = {
-				query: req.query.query,
+				query: req.query.domain,
 				country: req.query.country,
 				city: req.query.city,
-				waitMs: req.query.waitMs
+				waitMs: req.query.waitMs,
+				limit: req.query.limit
 			};
 			// check if query for suggesting is present
 			if (!reqParams.query) {
